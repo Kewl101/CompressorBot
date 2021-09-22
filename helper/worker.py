@@ -78,7 +78,7 @@ async def encc(e):
     )
 
 
-async def 720px265(e):
+async def "720px265"(e):
     try:
         es = dt.now()
         COUNT.append(e.chat_id)
@@ -149,7 +149,7 @@ async def 720px265(e):
         return COUNT.remove(e.chat_id)
 
 
-async def 480px265(e):
+async def "480px265"(e):
     try:
         es = dt.now()
         COUNT.append(e.chat_id)
@@ -220,7 +220,7 @@ async def 480px265(e):
         return COUNT.remove(e.chat_id)
 
 
-async def 480px264(e):
+async def "480px264"(e):
     try:
         es = dt.now()
         COUNT.append(e.chat_id)
@@ -296,15 +296,15 @@ async def sample(e):
         "`Generate Sample of the desired codec u want.`",
         buttons=[
             [
-                Button.inline("480px264", data=f"480px264{wah}"),
-                Button.inline("480px265", data=f"480px265{wah}"),
+                Button.inline("480px264", data=f"480px264s{wah}"),
+                Button.inline("480px265", data=f"480px265s{wah}"),
             ],
-            [Button.inline("720px265", data=f"720px265{wah}")],
+            [Button.inline("720px265", data=f"720px265s{wah}")],
         ],
     )
 
 
-async def 720px265s(e):
+async def "720px265s"(e):
     wah = e.pattern_match.group(1).decode("UTF-8")
     wh = decode(wah)
     COUNT.append(e.chat_id)
@@ -360,7 +360,7 @@ async def 720px265s(e):
         return
 
 
-async def 480px265s(e):
+async def "480px265s"(e):
     wah = e.pattern_match.group(1).decode("UTF-8")
     wh = decode(wah)
     COUNT.append(e.chat_id)
@@ -416,7 +416,7 @@ async def 480px265s(e):
         return
 
 
-        async def 480px264s(e):
+        async def "480px264s"(e):
     wah = e.pattern_match.group(1).decode("UTF-8")
     wh = decode(wah)
     COUNT.append(e.chat_id)
@@ -591,7 +591,7 @@ async def encod(event):
         return COUNT.remove(user.id)
 
 
-async def 720px265c(e, key):
+async def "720px265c"(e, key):
     try:
         es = dt.now()
         COUNT.append(e.chat_id)
@@ -662,7 +662,7 @@ async def 720px265c(e, key):
         return COUNT.remove(e.chat_id)
 
 
-async def 480px265c(e, key):
+async def "480px265c"(e, key):
     try:
         es = dt.now()
         COUNT.append(e.chat_id)
@@ -733,7 +733,7 @@ async def 480px265c(e, key):
         return COUNT.remove(e.chat_id)
 
 
-async def 480px264c(e, key):
+async def "480px264c"(e, key):
     try:
         es = dt.now()
         COUNT.append(e.chat_id)
