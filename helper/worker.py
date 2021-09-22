@@ -66,7 +66,7 @@ async def stats(e):
 
 
 async def encc(event):
-    wah = e.pattern_match.group(1).decode()
+    wah = event.pattern_match.group(1).decode()
     await event.reply(
         "`Media Downloaded select the codec u want your output in.`",
         buttons=[
@@ -293,7 +293,7 @@ async def _480px264(e):
 
 
 async def sample(event):
-    wah = e.pattern_match.group(1).decode()
+    wah = event.pattern_match.group(1).decode()
     await event.reply(
         "`Generate Sample of the desired codec u want.`",
         buttons=[
