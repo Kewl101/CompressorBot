@@ -65,7 +65,7 @@ async def stats(e):
         await e.answer("Someting Went Wrong 🤔\nResend Media", cache_time=0, alert=True)
 
 
-async def encc(e):
+async def encc(event):
     await event.reply(
         "`Media Downloaded select the codec u want your output in.`",
         buttons=[
@@ -291,7 +291,7 @@ async def _480px264(e):
         return COUNT.remove(e.chat_id)
 
 
-async def sample(e):
+async def sample(event):
     await event.reply(
         "`Generate Sample of the desired codec u want.`",
         buttons=[
