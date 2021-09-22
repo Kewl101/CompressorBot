@@ -54,7 +54,7 @@ async def screenshot(e):
 
 async def stats(e):
     try:
-        wah = e.pattern_match.group(1).decode()
+        wah = e.pattern_match.group(1).decode("UTF-8")
         wh = decode(wah)
         out, dl, thum, dtime = wh.split(";")
         ot = hbs(int(Path(out).stat().st_size))
@@ -66,23 +66,24 @@ async def stats(e):
 
 
 async def encc(event):
+    wah = e.pattern_match.group(1).decode()
     await event.reply(
         "`Media Downloaded select the codec u want your output in.`",
         buttons=[
             [
-                Button.inline("480px264", data=f"x480px264{wah}"),
-                Button.inline("480px265", data=f"x480px265{wah}"),
+                Button.inline("480px264", data=f"_480px264{wah}"),
+                Button.inline("480px265", data=f"_480px265{wah}"),
             ],
-            [Button.inline("720px265", data=f"x720px265{wah}")],
+            [Button.inline("720px265", data=f"_720px265{wah}")],
         ],
     )
 
 
-async def x720px265(e):
+async def _720px265(e):
     try:
         es = dt.now()
         COUNT.append(e.chat_id)
-        wah = e.pattern_match.group(1).decode()
+        wah = e.pattern_match.group(1).decode("UTF-8")
         wh = decode(wah)
         out, dl, thum, dtime = wh.split(";")
         nn = await e.edit(
@@ -149,11 +150,11 @@ async def x720px265(e):
         return COUNT.remove(e.chat_id)
 
 
-async def x480px265(e):
+async def _480px265(e):
     try:
         es = dt.now()
         COUNT.append(e.chat_id)
-        wah = e.pattern_match.group(1).decode()
+        wah = e.pattern_match.group(1).decode("UTF-8")
         wh = decode(wah)
         out, dl, thum, dtime = wh.split(";")
         nn = await e.edit(
@@ -220,11 +221,11 @@ async def x480px265(e):
         return COUNT.remove(e.chat_id)
 
 
-async def x480px264(e):
+async def _480px264(e):
     try:
         es = dt.now()
         COUNT.append(e.chat_id)
-        wah = e.pattern_match.group(1).decode()
+        wah = e.pattern_match.group(1).decode("UTF-8")
         wh = decode(wah)
         out, dl, thum, dtime = wh.split(";")
         nn = await e.edit(
@@ -292,19 +293,20 @@ async def x480px264(e):
 
 
 async def sample(event):
+    wah = e.pattern_match.group(1).decode()
     await event.reply(
         "`Generate Sample of the desired codec u want.`",
         buttons=[
             [
-                Button.inline("480px264", data=f"x480px264s{wah}"),
-                Button.inline("480px265", data=f"x480px265s{wah}"),
+                Button.inline("480px264", data=f"_480px264s{wah}"),
+                Button.inline("480px265", data=f"_480px265s{wah}"),
             ],
-            [Button.inline("720px265", data=f"x720px265s{wah}")],
+            [Button.inline("720px265", data=f"_720px265s{wah}")],
         ],
     )
 
 
-async def x720px265s(e):
+async def _720px265s(e):
     wah = e.pattern_match.group(1).decode("UTF-8")
     wh = decode(wah)
     COUNT.append(e.chat_id)
@@ -360,7 +362,7 @@ async def x720px265s(e):
         return
 
 
-async def x480px265s(e):
+async def _480px265s(e):
     wah = e.pattern_match.group(1).decode("UTF-8")
     wh = decode(wah)
     COUNT.append(e.chat_id)
@@ -416,7 +418,7 @@ async def x480px265s(e):
         return
 
 
-async def x480px264s(e):
+async def _480px264s(e):
     wah = e.pattern_match.group(1).decode("UTF-8")
     wh = decode(wah)
     COUNT.append(e.chat_id)
@@ -591,7 +593,7 @@ async def encod(event):
         return COUNT.remove(user.id)
 
 
-async def x720px265c(e, key):
+async def _720px265c(e, key):
     try:
         es = dt.now()
         COUNT.append(e.chat_id)
@@ -662,7 +664,7 @@ async def x720px265c(e, key):
         return COUNT.remove(e.chat_id)
 
 
-async def x480px265c(e, key):
+async def _480px265c(e, key):
     try:
         es = dt.now()
         COUNT.append(e.chat_id)
@@ -733,7 +735,7 @@ async def x480px265c(e, key):
         return COUNT.remove(e.chat_id)
 
 
-async def x480px264c(e, key):
+async def _480px264c(e, key):
     try:
         es = dt.now()
         COUNT.append(e.chat_id)
