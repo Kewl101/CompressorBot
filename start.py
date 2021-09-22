@@ -101,6 +101,36 @@ async def _(e):
     await beck(e)
 
 
+@cbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"_480px264(.*)")))
+async def _(e):
+    await encc(e)
+
+
+@cbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"_480px265(.*)")))
+async def _(e):
+    await encc(e)
+
+    
+@cbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"_720px265(.*)")))
+async def _(e):
+    await encc(e)
+
+
+@cbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"_480px264s(.*)")))
+async def _(e):
+    await encc(e)
+    
+    
+@cbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"_480px265s(.*)")))
+async def _(e):
+    await encc(e)
+    
+    
+@cbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"_720px265s(.*)")))
+async def _(e):
+    await encc(e)
+    
+    
 ########## Direct ###########
 
 
