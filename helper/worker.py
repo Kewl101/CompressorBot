@@ -54,7 +54,7 @@ async def screenshot(e):
 
 async def stats(e):
     try:
-        wah = e.pattern_match.group(1).decode("UTF-8")
+        wah = e.pattern_match.group(1).decode()
         wh = decode(wah)
         out, dl, thum, dtime = wh.split(";")
         ot = hbs(int(Path(out).stat().st_size))
@@ -82,7 +82,7 @@ async def _720px265(e):
     try:
         es = dt.now()
         COUNT.append(e.chat_id)
-        wah = e.pattern_match.group(1).decode("UTF-8")
+        wah = e.pattern_match.group(1).decode()
         wh = decode(wah)
         out, dl, thum, dtime = wh.split(";")
         nn = await e.edit(
@@ -153,7 +153,7 @@ async def _480px265(e):
     try:
         es = dt.now()
         COUNT.append(e.chat_id)
-        wah = e.pattern_match.group(1).decode("UTF-8")
+        wah = e.pattern_match.group(1).decode()
         wh = decode(wah)
         out, dl, thum, dtime = wh.split(";")
         nn = await e.edit(
@@ -224,7 +224,7 @@ async def _480px264(e):
     try:
         es = dt.now()
         COUNT.append(e.chat_id)
-        wah = e.pattern_match.group(1).decode("UTF-8")
+        wah = e.pattern_match.group(1).decode()
         wh = decode(wah)
         out, dl, thum, dtime = wh.split(";")
         nn = await e.edit(
