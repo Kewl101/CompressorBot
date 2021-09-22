@@ -67,13 +67,13 @@ async def stats(e):
 
 async def encc(e):
     await event.reply(
-        "`Media Downloaded select the codec u want your output in.`"
+        "`Media Downloaded select the codec u want your output in.`",
         buttons=[
-            [Button.inline("720px265", data=f"720px265{wah}")],
             [
                 Button.inline("480px264", data=f"480px264{wah}"),
                 Button.inline("480px265", data=f"480px265{wah}"),
             ],
+            [Button.inline("720px265", data=f"720px265{wah}")],
         ],
     )
 
@@ -293,13 +293,13 @@ async def 480px264(e):
 
 async def sample(e):
     await event.reply(
-        "`Generate Sample of the desired codec u want.`"
+        "`Generate Sample of the desired codec u want.`",
         buttons=[
-            [Button.inline("720px265", data=f"720px265s{wah}")],
             [
-                Button.inline("480px264", data=f"480px264s{wah}"),
-                Button.inline("480px265", data=f"480px265s{wah}"),
+                Button.inline("480px264", data=f"480px264{wah}"),
+                Button.inline("480px265", data=f"480px265{wah}"),
             ],
+            [Button.inline("720px265", data=f"720px265{wah}")],
         ],
     )
 
